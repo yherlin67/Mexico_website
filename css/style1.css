@@ -1,0 +1,144 @@
+@import url(https://db.onlinewebfonts.com/c/b6539b6d3432c623d8d4f9cc2a29589e?family=Berlin+Sans+FB+Demi+Bold);
+
+html
+{
+    font-family: "Berlin Sans FB Demi Bold";
+    
+}
+header {
+    display: flex;
+    justify-content: center;
+}
+
+img#header {
+    width: 35%;
+    margin-left: 2%;
+    text-align: center;
+}
+
+img#logonav {
+    width: 6%;
+}
+
+body {
+    background-image: url('../img/fond_accueil.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+article {
+    background-color:rgb(171, 244, 222);;
+    width: 100%;
+    margin-top: 8%;
+    padding: 3%;
+    box-sizing: border-box;
+}
+
+
+h1.gros-titre {
+    text-align: center;
+    font-size: 4em;
+    font-family: "Berlin Sans FB Demi Bold";
+    /*Couleur de secours*/
+    color: #381111;
+    margin-top: 20px;
+    background: linear-gradient(to bottom, rgb(26, 49, 3), rgb(21, 165, 129)); /* noir -> vert foncé */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* WebKit */
+}   
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+}
+
+h3 {
+    text-align:center
+}
+
+h3.morz {
+    margin-top: 5%;
+}
+
+nav {
+    background-color: rgb(18, 106, 46);
+}
+
+ul {
+    display: flex;
+    margin: 0;
+    justify-content: space-around;
+    padding: 1.25%;
+    
+}
+
+li {
+    list-style-type: none;
+    padding-top: 1.5%;
+}
+
+a.lien {
+    text-decoration: none;
+    color: rgb(171, 244, 222);
+    font-weight: bold;
+    font-size: 1.25em;
+    font-family: 'Quicksand', system-ui, sans-serif;
+}
+
+a.btn {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 1.25em;
+    font-family: 'Quicksand', system-ui, sans-serif;
+    background: linear-gradient(to bottom, rgb(171, 231, 202), rgb(18, 106, 46));
+    border-radius: 50px;
+    padding: 1.5%;
+    border-style: groove;
+    transition: 
+        transform 0.2s ease, /*Permet de faire une animation de transition quand transform change*/
+        padding 0.5s ease; /*Permet de faire une animation de transition quand le padding change*/
+}
+
+a:hover {
+    transform: scale(1.1); /*transform change (grossissement)*/
+}
+
+section.presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.places {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a.place {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family: 'Quicksand', system-ui, sans-serif;
+    background-color: rgb(200, 200, 200);
+    border-radius: 25px;
+    padding: 0;
+    border-style: solid;
+    width: 250px;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 
+        transform 0.2s ease, /*Permet de faire une animation de transition quand transform change*/
+        padding 0.5s ease; /*Permet de faire une animation de transition quand le padding change*/
+}
+
