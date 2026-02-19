@@ -5,6 +5,10 @@ html
     font-family: "Berlin Sans FB Demi Bold";
     
 }
+
+p {
+    color: rgb(18, 106, 46);
+}
 header {
     display: flex;
     justify-content: center;
@@ -29,6 +33,25 @@ body {
     
     
 }
+
+.video-container {
+    display: flex;       
+    justify-content: center; 
+    align-items: center;     
+    margin: 20px 0;      
+}
+
+.overlay {
+    position: absolute;
+    top: 10;
+    left: 10;
+    width: 40%;
+    height: 45%;
+    z-index: 9999;
+    background: transparent;
+    /*background: rgba(255, 0, 0, 0.5);*/
+}
+
 
 article {
     background-color:rgb(171, 244, 222);;
