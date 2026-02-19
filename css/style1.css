@@ -7,6 +7,7 @@ html
 }
 
 p {
+    margin-top: 10%;
     color: rgb(18, 106, 46);
 }
 header {
@@ -35,9 +36,10 @@ body {
 }
 
 .video-container {
+    border-radius: 25px;
     position: relative; /* Indispensable pour que l'overlay se cale dessus */
-    width: 560px;
-    height: 315px; /* Dimension Youtube standard = équivaut à width et height 100% pour iframe*/
+    width: 800px;
+    height: 450px; /* Dimension Youtube standard = équivaut à width et height 100% pour iframe*/
     margin: 0 auto; /* Centrage horizontal de la vidéo car margin 0 pour haut et bas et auto pour left et right*/
 }
 
@@ -45,16 +47,31 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 101%;
+    height: 102%;
     z-index: 10; /* Place la div au-dessus de la vidéo */
     background: transparent; /* On ne voit rien */
+
 }
 
 iframe {
     width: 100%;
     height: 100%;
+    border: 5px ridge ;
+    border-radius: 25px;
+    border-color: #0baa0b;
 }
+
+img#perso {
+    position: absolute;
+    z-index: 11;
+    top: 10%;           
+    right: 0px;         
+    left: 75%;
+    width: 60%;        
+    height: auto;
+}
+ 
 
 
 article {
