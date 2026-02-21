@@ -111,6 +111,10 @@ article {
     box-sizing: border-box;
 }
 
+h1 {
+    color: rgb(18, 106, 46);
+    font-size: 3em;
+}
 
 h1.gros-titre {
     text-align: center;
@@ -130,24 +134,29 @@ h2 {
     font-size: 2em;
 }
 
-h3 {
-    text-align:center
+h2.centre {
+    text-align: center;
+    margin-top: 5%;
 }
 
-h3.morz {
-    margin-top: 5%;
+h3 {
+    text-align:center
 }
 
 nav {
     background-color: rgb(18, 106, 46);
 }
 
-ul {
+ul.nav {
     display: flex;
     margin: 0;
     justify-content: space-around;
     padding: 1.25%;
     
+}
+
+ul {
+    line-height: 1.5;
 }
 
 li {
@@ -188,6 +197,24 @@ section.paragraphe {
     margin-left: 3%;
 }
 
+section.container {
+    display: flex;
+    flex-direction: column;
+}
+
+div.rubriques {
+    padding: 3%;
+    margin-top: 3%;
+    margin-left: 3%;
+    background-color: rgb(21, 206, 113);
+    border-radius: 25px;
+}
+
+div.regroupement {
+    display: flex;
+    justify-content: space-around;    
+}
+
 section.presentation {
     display: flex;
     flex-direction: column;
@@ -202,17 +229,18 @@ section.places {
 
 a.place {
     text-decoration: none;
-    color: black;
+    color: rgb(37, 57, 4);
     font-weight: bold;
     font-size: 1.5em;
     font-family: 'Quicksand', system-ui, sans-serif;
-    background-color: rgb(200, 200, 200);
+    background-color: rgb(9, 253, 200);
     border-radius: 25px;
     padding: 0;
     border-style: solid;
     width: 250px;
     height: 170px;
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
 
