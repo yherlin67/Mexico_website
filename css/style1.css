@@ -101,8 +101,6 @@ img#cactus {
     height: auto;
 }
  
-
-
 article {
     background-color:rgb(171, 244, 222);;
     width: 100%;
@@ -155,8 +153,12 @@ ul.nav {
     
 }
 
-ul {
-    line-height: 1.5;
+ul.regroupement li {
+    margin-bottom: 5%;
+}
+
+ul.regroupement li:last-child {
+    margin-bottom: 0;
 }
 
 li {
@@ -165,12 +167,15 @@ li {
 }
 
 
+
 a.lien {
     text-decoration: none;
     color: rgb(171, 244, 222);
     font-weight: bold;
     font-size: 1.25em;
     font-family: 'Quicksand', system-ui, sans-serif;
+    position: relative;    /* Obligatoire pour caler le soulignement par rapport au lien */
+    transition: color 0.3s;
 }
 
 a.btn {
@@ -249,3 +254,41 @@ a.place {
         padding 0.5s ease; /*Permet de faire une animation de transition quand le padding change*/
 }
 
+/* L'état de départ : invisible et un peu décalé vers le bas */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+/* L'état quand l'élément est visible */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ::after = créé un faux élément juste "après" mon texte */
+a.nav::after,
+a.reg::after {
+  content: "";           /* Obligatoire pour qu'un pseudo-élément s'affiche */
+  position: absolute;
+  left: 0;
+  bottom: -2px;          /* Place la ligne juste en dessous du texte */
+  width: 0;              /* Largeur de départ : 0 */
+  height: 2px;           /* Épaisseur de la ligne */
+  transition: width 0.4s ease-out; /* L'animation de la largeur */
+}
+
+/* L'effet au survol */
+a.nav:hover::after,
+a.reg:hover::after {
+  width: 100%;           /* La ligne s'étend sur toute la largeur du lien */
+}
+
+a.nav::after {
+  background-color: #f22000;
+}
+
+a.reg::after {
+  background-color: #a21c07; /* La couleur de ton surlignage */
+}

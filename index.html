@@ -10,15 +10,15 @@
     <nav>
         <ul class="nav">
             <img src="img/logo_nav.png" alt="Logo nav" id="logonav">
-            <li><a class="lien" href="accueil.html">Les hôtels</a></li>
-            <li><a class="lien" href="activites.html">Les restaurants</a></li>
-            <li><a class="lien" href="hebergements.html">Les vols</a></li>
-            <li><a class="lien" href="contact.html">FAQ</a></li>
+            <li><a class="lien nav" href="accueil.html">Les hôtels</a></li>
+            <li><a class="lien nav" href="activites.html">Les restaurants</a></li>
+            <li><a class="lien nav" href="hebergements.html">Les vols</a></li>
+            <li><a class="lien nav" href="contact.html">FAQ</a></li>
         </ul>
     </nav>
     <header>
         <img src="img/drapeau_gauche.png" alt="Image header" id="drapeau_gauche">
-        <img src="img/visit_mexico2.png" alt="Image header" id="header">
+        <img src="img/visit_mexico2.png" alt="Image header" id="header" class="reveal">
         <img src="img/drapeau_droite.png" alt="Image header" id="drapeau_droite">
     </header>
     <main>
@@ -26,7 +26,7 @@
             <a class='btn' href="reservation.html">Réserver mon séjour</a>
         </section>
         <article>
-            <h1 class="gros-titre">¡Aquí vamos!</h1>
+            <h1 class="gros-titre reveal">¡Aquí vamos!</h1>
             <div class="video-container">
                 <img src="img/perso_mexique.png" alt="Image article" id="perso">
                 <img src="img/cactus.png" alt="Image article" id="cactus">
@@ -38,7 +38,7 @@
                     allowfullscreen>
                 </iframe>
             </div>
-            <section class="paragraphe">
+            <section class="paragraphe reveal">
                 <h2>Embarquez pour des vacances hors du commun</h2>
                 <p>La grandeur de la cité Maya de Palenque, la splandeur des couchers de soleil sur les plages d'El Arco,
                     L'audace des pyramides précolombiennes de Teotihucacán, L'immensité de la ville de Mexico City, ce sont toutes ces choses
@@ -49,26 +49,26 @@
                 </p>
             </section>
             <div class="rubriques">
-                <div class="regroupement">
+                <div class="regroupement reveal">
                     <section>
                         <h1>La culture mexicaine</h1>
-                        <ul>
-                            <li><a class="lien" href="histoire.html">- L'histoire du Mexique</a></li>
-                            <li><a class="lien" href="traditions.html">- Les traditions locales</a></li>
-                            <li><a class="lien" href="cuisine.html">- Le patrimoine culinaires</a></li>
+                        <ul class="regroupement">
+                            <li><a class="lien reg" href="histoire.html">- L'histoire du Mexique</a></li>
+                            <li><a class="lien reg" href="traditions.html">- Les traditions locales</a></li>
+                            <li><a class="lien reg" href="cuisine.html">- Le patrimoine culinaires</a></li>
                         </ul>
                     </section>
                     <section>
                         <h1>Les éléments pratiques</h1>
-                        <ul>
-                            <li><a class="lien" href="carte.html">- La carte du Mexique</a></li>
-                            <li><a class="lien" href="climat.html">- Le climat</a></li>
-                            <li><a class="lien" href="carnet.html">- Le carnet de voyage</a></li>
+                        <ul class="regroupement">
+                            <li><a class="lien reg" href="carte.html">- La carte du Mexique</a></li>
+                            <li><a class="lien reg" href="climat.html">- Le climat</a></li>
+                            <li><a class="lien reg" href="carnet.html">- Le carnet de voyage</a></li>
                         </ul>
                     </section>
                 </div>
                 <section>
-                    <h2 class="centre">Où allons nous ?</h2>
+                    <h2 class="centre reveal">Où allons nous ?</h2>
                     <section class="places">
                         <a class="place" href="chavannes.html">Mexico</a>
                         <a class="place" href="rosta.html">Environs de Mexico</a>
@@ -101,5 +101,18 @@
     </footer>
     
 </body>
-<script src="script.js"></script>
+<script>
+    const observer = new IntersectionObserver((entries) => { //entries = les élements observés à l'écran
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        }
+    });
+    }, {
+    threshold: 0.1 // L'effet se déclenche quand 10% de l'élément est visible
+    });
+
+    // On cible tous les éléments avec la classe reveal
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+</script>
 </html>
