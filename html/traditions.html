@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Mexico</title>
+    <link rel="stylesheet" href="../css/style1.css">
+</head>
+<body>
+    <nav>
+        <ul class="nav">
+            <img src="../img/logo_nav.png" alt="Logo nav" id="logonav">
+            <li><a class="lien nav" href="accueil.html">Les hôtels</a></li>
+            <li><a class="lien nav" href="activites.html">Les restaurants</a></li>
+            <li><a class="lien nav" href="hebergements.html">Les vols</a></li>
+            <li><a class="lien nav" href="contact.html">FAQ</a></li>
+        </ul>
+    </nav>
+    <header>
+    </header>
+    <main>
+        <article>
+        </article>
+    </main>
+    <footer>
+        <p class="credits">Crédits vidéo : Mexico in 4K - Hidden Gems & Incredible Scenes --- 4k Films by Adnan</p>
+    </footer>
+    
+</body>
+<script>
+    const observer = new IntersectionObserver((entries) => { //entries = les élements observés à l'écran
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        }
+    });
+    }, {
+    threshold: 0.1 // L'effet se déclenche quand 10% de l'élément est visible
+    });
+
+    // On cible tous les éléments avec la classe reveal
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+</script>
+</html>
