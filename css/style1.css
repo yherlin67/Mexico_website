@@ -3,6 +3,7 @@
 html
 {
     font-family: "Berlin Sans FB Demi Bold";
+    scroll-behavior: smooth;
     
 }
 
@@ -165,24 +166,21 @@ li {
     padding-top: 1.5%;
 }
 
-
-
-a.lien {
+a {
     text-decoration: none;
-    color: rgb(171, 244, 222);
     font-weight: bold;
     font-size: 1.25em;
     font-family: 'Quicksand', system-ui, sans-serif;
+}
+
+a.lien {
+    color: rgb(171, 244, 222);
     position: relative;    /* Obligatoire pour caler le soulignement par rapport au lien */
     transition: color 0.3s;
 }
 
 a.btn {
-    text-decoration: none;
     color: rgb(255, 255, 255);
-    font-weight: bold;
-    font-size: 1.25em;
-    font-family: 'Quicksand', system-ui, sans-serif;
     background: linear-gradient(to bottom, rgb(171, 231, 202), rgb(18, 106, 46));
     border-radius: 50px;
     padding: 1.5%;
@@ -190,6 +188,10 @@ a.btn {
     transition: 
         transform 0.2s ease, /*Permet de faire une animation de transition quand transform change*/
         padding 0.5s ease; /*Permet de faire une animation de transition quand le padding change*/
+}
+
+a.endroit {
+    color: rgb(40, 132, 18);
 }
 
 a:hover {
