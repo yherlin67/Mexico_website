@@ -103,7 +103,7 @@
     
 </body>
 <script>
-    const observer = new IntersectionObserver((entries) => { //entries = les élements observés à l'écran
+    const observer = new IntersectionObserver((entries) => { //entries = les élements observés à l'écran, paramètres d'une fonction ici
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
         entry.target.classList.add('active');
