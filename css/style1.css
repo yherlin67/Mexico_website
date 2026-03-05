@@ -247,6 +247,7 @@ a.place {
     height: 170px;
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
 
     transition: 
@@ -255,6 +256,7 @@ a.place {
 }
 /*Mettre une margin top pour le span du dessous et le faire monter au hover*/
 a.place.double-texte {
+    color: rgb(241, 252, 227);
     padding: 0;
     display: flex;
     flex-direction: column; /* On empile les textes */
@@ -276,6 +278,26 @@ a.place.double-texte span {
 
 a.place.double-texte:hover span {
   transform: translateY(-170px);
+}
+
+a#teo {
+    background-image: url(../img/fond_teo.png);
+    background-size: cover;
+}
+
+a#pue {
+    background-image: url(../img/fond_pue.png);
+    background-size: cover;
+}
+
+a#cue {
+    background-image: url(../img/fond_cue.png);
+    background-size: cover;
+}
+
+a#mal {
+    background-image: url(../img/fond_mal.png);
+    background-size: cover;
 }
 
 /* L'état de départ : invisible et un peu décalé vers le bas */
